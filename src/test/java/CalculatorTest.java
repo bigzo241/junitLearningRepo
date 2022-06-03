@@ -6,6 +6,7 @@ import org.junit.jupiter.params.provider.ValueSource;
 import java.text.MessageFormat;
 import java.time.Duration;
 import java.time.Instant;
+import java.util.ArrayList;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -93,16 +94,16 @@ public class CalculatorTest {
         assertThat(result).isEqualTo(0);
     }
 
-//    @Test
-//    public void listDigits_shouldReturnsTheListOfDigits_ofPositiveInteger() {
-//        // GIVEN
-//        int number = 95897;
-//
-//        // WHEN
-//        Set<Integer> actualDigits = calculatorUnderTest.digitsSet(number);
-//
-//        // THEN
-//        assertThat(actualDigits).containsExactlyInAnyOrder(5, 7, 8, 9);
-//    }
+    @Test
+    public void listDigits_shouldReturnsTheListOfDigits_ofPositiveInteger() {
+        // GIVEN
+        int number = 9587;
+
+        // WHEN
+        ArrayList<Integer> actualDigits = calculatorUnderTest.digitsSet(number);
+
+        // THEN
+        assertThat(actualDigits).containsExactlyInAnyOrder(5, 7, 8, 9);
+    }
 
 }

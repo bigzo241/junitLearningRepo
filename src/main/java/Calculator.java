@@ -1,5 +1,4 @@
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
 
 
 public class Calculator {
@@ -12,12 +11,13 @@ public class Calculator {
         return a*b;
     }
 
-    public Set<Integer> digitsSet(int number) {
+    public ArrayList<Integer> digitsSet(int number) {
         String chaine = String.valueOf(number);
-        System.out.println(chaine.toCharArray());
-        Set<Integer> set = new HashSet<>();
-        for (int i=0;i<chaine.length();i++) {
-            set.add((int) chaine.charAt(i));
+        ArrayList<Integer> set = new ArrayList<>();
+        int i;
+        for (i=0;i<chaine.length();i++) {
+            char c = chaine.charAt(i);
+            set.add( Integer.parseInt(String.valueOf(c)));
         }
         return set;
     }
